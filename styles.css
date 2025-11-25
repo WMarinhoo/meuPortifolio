@@ -290,5 +290,38 @@ h1 {
     border-radius: 5px;
 }
 
+.rodape {
+    margin-top: 40px;
+    padding: 30px 0;
+    text-align: center;
+    background: #0A0A0A; /* pode ajustar */
+    text-align: center;
+}
 
+.redes-sociais {
+    margin-bottom: 15px;
+}
+
+.redes-sociais a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.redes-sociais i {
+    font-size: 32px;
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s;
+    
+}
+
+.redes-sociais i:hover {
+    transform: scale(1.2);
+    color: var(--secundaria); /* muda ao passar o mouse */
+}
+
+.rodape-texto {
+    color: #ccc;
+    font-size: 14px;
+    
+}
 
