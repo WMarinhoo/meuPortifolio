@@ -277,5 +277,18 @@ h1 {
     }
 }
 
+.logo-fixa {
+    position: fixed;
+    top: 10px;       /* distância do topo */
+    left: 10px;      /* distância da esquerda */
+    z-index: 9999;   /* garante que fique acima de tudo */
+}
+
+.logo-fixa img {
+    width: 50px;     /* tamanho do ícone */
+    height: auto;
+    border-radius: 5px;
+}
+
 
 

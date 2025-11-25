@@ -1,3 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("LSPlatformTaskSystemTransportEager",["LSPlatformTaskSystemTransport","Promise"],(function(t,n,r,o,a,i,l){"use strict";var e,s=function(){return(e||(e=n("Promise"))).resolve(r("LSPlatformTaskSystemTransport"))};l.load=s}),98);
