@@ -8,6 +8,8 @@
     <title>DownloadTech | Portfólio</title>
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -32,56 +34,59 @@
         </ul>
     </nav>
 
-    <main id="inicio" class="cabecalho">
-        <img src="./img/perfil.jpg" alt="Foto de Wendel Marinho" class="foto-perfil">
-        <h1>Wendel Marinho</h1>
-        <p class="cabecalho-sub-titulo">🤖 Automação de websites</p>
-        <p class="cabecalho-sub-titulo">🖥️ Montagem & Manutenção de PCs</p>
-        <p class="cabecalho-sub-titulo">🔧 Upgrades • Limpeza • Troca de peças</p>
-        <p class="cabecalho-sub-titulo">💾 Formatação • Otimização • BIOS</p>
+    <!-- CABEÇALHO -->
+    <main id="inicio" class="cabecalho" data-aos="fade-up">
+        <img src="./img/perfil.jpg" alt="Foto de Wendel Marinho" class="foto-perfil" data-aos="zoom-in"
+            data-aos-delay="300">
+        <h1 data-aos="fade-up" data-aos-delay="500">Wendel Marinho</h1>
+        <p class="cabecalho-sub-titulo" data-aos="fade-up" data-aos-delay="700">🤖 Automação de websites</p>
+        <p class="cabecalho-sub-titulo" data-aos="fade-up" data-aos-delay="800">🖥️ Montagem & Manutenção de PCs</p>
+        <p class="cabecalho-sub-titulo" data-aos="fade-up" data-aos-delay="900">🔧 Upgrades • Limpeza • Troca de peças
+        </p>
+        <p class="cabecalho-sub-titulo" data-aos="fade-up" data-aos-delay="1000">💾 Formatação • Otimização • BIOS</p>
     </main>
 
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-caixa">
-            <p class="sobre-paragrafo">
-                Olá! Sou um profissional apaixonado por tecnologia e especializado em soluções completas para quem busca
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre" data-aos="fade-up">
+        <h2 class="sobre-titulo" data-aos="fade-up" data-aos-delay="200">Sobre Mim</h2>
+        <div class="sobre-caixa" data-aos="fade-up" data-aos-delay="400">
+            <p class="sobre-paragrafo">Olá! Sou um profissional apaixonado por tecnologia e especializado em soluções
+                completas para quem busca
                 desempenho, eficiência e praticidade. Trabalho oferecendo serviços de automação de websites, além de
                 dominar todo o processo de montagem, manutenção e otimização de computadores. Com experiência prática e
                 foco em resultados, ajudo você a aproveitar ao máximo seus equipamentos e a automatizar tarefas que
-                economizam tempo e aumentam produtividade.
+                economizam tempo e aumentam produtividade.</p>
         </div>
     </section>
-    <!-- SEÇÃO DE CONTADORES -->
-    <section class="stats-section">
+
+
+    <!-- CONTADORES (a seção que criamos antes) -->
+    <section class="stats-section" data-aos="fade-up">
         <div class="stats-container">
-            <div class="stat">
-                <span class="counter" data-target="67">0</span>
-                <span class="plus">+</span>
+            <div class="stat" data-aos="fade-up" data-aos-delay="100"><span class="counter"
+                    data-target="67">0</span><span class="plus">+</span>
                 <p>Setups Montados</p>
             </div>
-            <div class="stat">
-                <span class="counter" data-target="5">0</span>
-                <span class="plus">★</span>
+            <div class="stat" data-aos="fade-up" data-aos-delay="200"><span class="counter"
+                    data-target="5">0</span><span class="plus">★</span>
                 <p>Anos de Experiência</p>
             </div>
-            <div class="stat">
-                <span class="counter" data-target="100">0</span>
-                <span class="plus">%</span>
+            <div class="stat" data-aos="fade-up" data-aos-delay="300"><span class="counter"
+                    data-target="100">0</span><span class="plus">%</span>
                 <p>Clientes Satisfeitos</p>
             </div>
-            <div class="stat">
-                <span class="counter" data-target="42">0</span>
-                <span class="plus">+</span>
+            <div class="stat" data-aos="fade-up" data-aos-delay="400"><span class="counter"
+                    data-target="42">0</span><span class="plus">+</span>
                 <p>Upgrades Realizados</p>
             </div>
         </div>
     </section>
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulos">Meus Projetos</h2>
-        <div class="projetos-caixa">
 
-            <div class="projetos-card">
+    <!-- PROJETOS -->
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulos" data-aos="fade-up">Meus Projetos</h2>
+        <div class="projetos-caixa" data-aos="fade-up" data-aos-delay="100">
+            <div class="projetos-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="carousel">
                     <div class="carousel-item"><img src="img/projeto1.png" alt="Foto 1" class="projetos-imagem"></div>
                     <div class="carousel-item"><img src="img/projeto1.2.png" alt="Foto 2" class="projetos-imagem"></div>
@@ -144,10 +149,12 @@
         </div>
     </section>
 
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em Contato</h2>
+    <!-- CONTATO -->
+    <section id="contatos" class="contatos" data-aos="fade-up">
+        <h2 class="contatos-titulo" data-aos="fade-up" data-aos-delay="200">Entre em Contato</h2>
 
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)" data-aos="fade-up"
+            data-aos-delay="400">
             <div class="grupo-form">
                 <input placeholder="Nome" class="campo-form" id="nome">
             </div>
@@ -160,30 +167,31 @@
         </form>
     </section>
 
-    
+
     <footer class="rodape">
-        <div class="redes-sociais">
+        <div class="redes-sociais" data-aos="fade-up" data-aos-delay="200">
             <a href="https://instagram.com/wendelmarinh0" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
 
-            
+
 
             <a href="https://github.com/WMarinhoo" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </div>
 
-        <p class="rodape-texto">© 2025 DownloadTech • Todos os direitos reservados</p>
+        <p class="rodape-texto" data-aos="fade-up" data-aos-delay="200">© 2025 DownloadTech • Todos os direitos
+            reservados</p>
     </footer>
 
     <!-- BOTÃO FLUTUANTE WHATSAPP -->
     <a href="https://wa.me/5521998015316?text=Olá%20Wendel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20"
-        class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp" data-aos="fade-up" data-aos-delay="200">
         <i class="fab fa-whatsapp"></i>
     </a>
     <script>
-        
+
         function enviarWhats(event) {
             event.preventDefault()
 
@@ -293,6 +301,13 @@
 
         observer.observe(statsSection);
 
+        AOS.init({
+            duration: 1000,    // duração da animação
+            once: true,        // anima só uma vez (melhor performance)
+            offset: 100        // começa um pouco antes de entrar na tela
+        });
+
     </script>
 </body>
+
 </html>

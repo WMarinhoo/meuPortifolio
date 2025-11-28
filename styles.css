@@ -6,7 +6,8 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Deixar escrolagem do mouse de todo html mais suave */
+    scroll-behavior: smooth;
+    /* Deixar escrolagem do mouse de todo html mais suave */
 }
 
 :root {
@@ -24,38 +25,43 @@ body {
 }
 
 .navegacao {
-   position: fixed;
-   top: 0;
-   background: rgba(15, 23, 42, 0.8);
-   width: 100%;
-   z-index: 100;  /* Define que o menu fique na frente de todos os componentes da página */
-   padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    background: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    z-index: 100;
+    /* Define que o menu fique na frente de todos os componentes da página */
+    padding: 1.5rem;
 
 }
 
 .menu {
-   display: flex; 
-   justify-content: center; /* Alinha menu no centro da tela */
-   list-style: none; /* Tirar o ícone de bolinha dos textos do menu */
-   gap: 3rem; /* Desgrudar os textos do menu */
+    display: flex;
+    justify-content: center;
+    /* Alinha menu no centro da tela */
+    list-style: none;
+    /* Tirar o ícone de bolinha dos textos do menu */
+    gap: 3rem;
+    /* Desgrudar os textos do menu */
 }
 
 .menu-link {
-    text-decoration: none; /* Tirar linha dos ícones de link */
+    text-decoration: none;
+    /* Tirar linha dos ícones de link */
     color: var(--claro);
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
 }
 
-.menu-link::after{
+.menu-link::after {
     content: '';
     height: 2px;
     width: 0%;
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var( --primaria), var( --secundaria));
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
     transition: width 0.5s ease;
 }
 
@@ -76,7 +82,7 @@ body {
     height: 350px;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border-radius: 50%;
-    border: 4px solid var( --vidro);
+    border: 4px solid var(--vidro);
     animation: flutuar 3s ease-in-out infinite;
 }
 
@@ -92,7 +98,7 @@ h1 {
     color: var(--claro);
 }
 
-.sobre{
+.sobre {
     padding: 6rem 2rem;
 }
 
@@ -139,8 +145,10 @@ h1 {
 
 .projetos-card {
     width: 100%;
-    height: 400px; /* escolha a altura padrão */
-    object-fit: cover; /* corta sem distorcer */
+    height: 400px;
+    /* escolha a altura padrão */
+    object-fit: cover;
+    /* corta sem distorcer */
     display: block;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
@@ -154,7 +162,7 @@ h1 {
 
 .projetos-card:hover {
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-    transform: translateY(-10px) scale(1.03); 
+    transform: translateY(-10px) scale(1.03);
 }
 
 .projetos-imagem {
@@ -163,16 +171,16 @@ h1 {
     display: block;
 }
 
-.caixa-textos-projetos{
+.caixa-textos-projetos {
     padding: 1.5rem;
 }
 
-.info-projetos{
+.info-projetos {
     margin-block-start: 5px;
 }
 
 .paragrafo-projetos {
-    color: rgba(226, 232, 240,0.8);
+    color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;
 }
 
@@ -180,7 +188,7 @@ h1 {
     padding: 6rem 2rem;
 }
 
-.contatos-titulo { 
+.contatos-titulo {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
@@ -192,7 +200,7 @@ h1 {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     padding: 2rem;
-    border: 1px solid var( --vidro);
+    border: 1px solid var(--vidro);
     border-radius: 16px;
 }
 
@@ -200,8 +208,10 @@ h1 {
 .campo-form {
     width: 100%;
     max-width: 100%;
-    resize: none; /* impede estourar o layout */
-    box-sizing: border-box; /* impede ultrapassar o container */
+    resize: none;
+    /* impede estourar o layout */
+    box-sizing: border-box;
+    /* impede ultrapassar o container */
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
     border-style: 8px;
@@ -250,32 +260,37 @@ h1 {
 
 
 .carousel {
-  position: relative; /* importante para posicionar as setinhas */
-  display: flex;
-  overflow-x: hidden; /* agora escondemos o scroll manual */
-  scroll-behavior: smooth;
-  gap: 10px;
-  padding: 10px;
+    position: relative;
+    /* importante para posicionar as setinhas */
+    display: flex;
+    overflow-x: hidden;
+    /* agora escondemos o scroll manual */
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* Esconde a barra de rolagem */
+    display: none;
+    /* Esconde a barra de rolagem */
 }
 
 .carousel-item {
-  min-width: 100%;
-  height: 250px; /* escolha a altura padrão */
-  object-fit: cover; /* corta sem distorcer */
-  border-radius: 10px;
-  display: block;
-  scroll-snap-align: center;
-  flex-shrink: 0;
+    min-width: 100%;
+    height: 250px;
+    /* escolha a altura padrão */
+    object-fit: cover;
+    /* corta sem distorcer */
+    border-radius: 10px;
+    display: block;
+    scroll-snap-align: center;
+    flex-shrink: 0;
 }
 
 .carousel-item img {
-  width: 70%;
-  height: auto;
-  border-radius: 10px;
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .carousel-nav {
@@ -291,7 +306,8 @@ h1 {
     box-sizing: border-box;
 }
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     pointer-events: all;
     background: rgba(0, 0, 0, 0.6);
     border: none;
@@ -307,30 +323,37 @@ h1 {
     justify-content: center;
 }
 
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,
+.next-btn:hover {
     background: var(--primaria);
     transform: scale(1.1);
 }
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
-    50%{
+    50% {
         transform: translateY(-20px);
     }
 }
 
 .logo-fixa {
     position: fixed;
-    top: 10px;       /* distância do topo */
-    left: 10px;      /* distância da esquerda */
-    z-index: 9999;   /* garante que fique acima de tudo */
+    top: 10px;
+    /* distância do topo */
+    left: 10px;
+    /* distância da esquerda */
+    z-index: 9999;
+    /* garante que fique acima de tudo */
 }
 
 .logo-fixa img {
-    width: 50px;     /* tamanho do ícone */
+    width: 50px;
+    /* tamanho do ícone */
     height: auto;
     border-radius: 5px;
 }
@@ -355,18 +378,19 @@ h1 {
     font-size: 32px;
     color: #ffffff;
     transition: transform 0.3s, color 0.3s;
-    
+
 }
 
 .redes-sociais i:hover {
     transform: scale(1.2);
-    color: var(--secundaria); /* muda ao passar o mouse */
+    color: var(--secundaria);
+    /* muda ao passar o mouse */
 }
 
 .rodape-texto {
     color: #ccc;
     font-size: 14px;
-    
+
 }
 
 .stats-section {
@@ -435,7 +459,15 @@ h1 {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
