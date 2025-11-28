@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <div class="particulas"></div>
     <div class="logo-fixa">
         <img src="img/favicon.png" alt="Logo">
@@ -51,6 +50,31 @@
                 dominar todo o processo de montagem, manutenção e otimização de computadores. Com experiência prática e
                 foco em resultados, ajudo você a aproveitar ao máximo seus equipamentos e a automatizar tarefas que
                 economizam tempo e aumentam produtividade.
+        </div>
+    </section>
+    <!-- SEÇÃO DE CONTADORES -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat">
+                <span class="counter" data-target="67">0</span>
+                <span class="plus">+</span>
+                <p>Setups Montados</p>
+            </div>
+            <div class="stat">
+                <span class="counter" data-target="5">0</span>
+                <span class="plus">★</span>
+                <p>Anos de Experiência</p>
+            </div>
+            <div class="stat">
+                <span class="counter" data-target="100">0</span>
+                <span class="plus">%</span>
+                <p>Clientes Satisfeitos</p>
+            </div>
+            <div class="stat">
+                <span class="counter" data-target="42">0</span>
+                <span class="plus">+</span>
+                <p>Upgrades Realizados</p>
+            </div>
         </div>
     </section>
     <section id="projetos" class="projetos">
@@ -136,8 +160,32 @@
         </form>
     </section>
 
-    <script>
+    
+    <footer class="rodape">
+        <div class="redes-sociais">
+            <a href="https://instagram.com/wendelmarinh0" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
 
+            <a href="https://wa.me/5521998015316" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://github.com/WMarinhoo" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <p class="rodape-texto">© 2025 DownloadTech • Todos os direitos reservados</p>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5521998015316?text=Olá%20Wendel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20"
+        class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script>
+        
         function enviarWhats(event) {
             event.preventDefault()
 
@@ -154,7 +202,7 @@
         }
 
 
-
+        
         // CARROSSEL AUTOMÁTICO + SETINHAS
         document.querySelectorAll('.projetos-card').forEach(card => {
             const carousel = card.querySelector('.carousel');
@@ -215,24 +263,38 @@
             startAutoPlay();
         });
 
+
+        // CONTADORES ANIMADOS (só rodam quando aparecem na tela)
+        const counters = document.querySelectorAll('.counter');
+        const speed = 97; // velocidade da animação (quanto menor, mais rápido)
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 30);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Só anima quando a seção entrar na tela
+        const statsSection = document.querySelector('.stats-section');
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.unobserve(statsSection); // roda só uma vez
+            }
+        }, { threshold: 0.5 });
+
+        observer.observe(statsSection);
+
     </script>
-    <footer class="rodape">
-        <div class="redes-sociais">
-            <a href="https://instagram.com/wendelmarinh0" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="https://wa.me/5521998015316" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-
-            <a href="https://github.com/WMarinhoo" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-
-        <p class="rodape-texto">© 2025 DownloadTech • Todos os direitos reservados</p>
-    </footer>
 </body>
-
 </html>
