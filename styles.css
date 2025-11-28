@@ -22,7 +22,21 @@ html {
 body {
     background-color: var(--escuro);
     color: var(--claro);
+    padding-top: 90px;
+    /* altura do seu menu */
 }
+
+/* No mobile, o menu é menor */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .navegacao {
+        padding: 1rem;
+    }
+}
+
 
 .navegacao {
     position: fixed;
@@ -78,12 +92,28 @@ body {
 }
 
 .foto-perfil {
-    width: 350px;
-    height: 350px;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border: 4px solid var(--vidro);
     animation: flutuar 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.2rem;
+    }
 }
 
 h1 {
@@ -125,7 +155,24 @@ h1 {
 }
 
 .projetos {
-    padding: 6rem 10rem;
+    padding: 6rem 2rem; /* já estava bom, mas vamos melhorar */
+    
+}
+
+@media (max-width: 768px) {
+    .projetos {
+        padding: 4rem 1rem;
+    }
+
+    .projetos-caixa {
+        grid-template-columns: 1fr; /* 1 card por linha no celular */
+        
+        gap: 2rem;
+    }
+
+    .projetos-card {
+        height: 350px;
+    }
 }
 
 .projetos-titulos {
@@ -145,11 +192,12 @@ h1 {
 
 .projetos-card {
     width: 100%;
-    height: 400px;
-    /* escolha a altura padrão */
+    height: auto;     /* MUDANÇA IMPORTANTE */
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
     object-fit: cover;
     /* corta sem distorcer */
-    display: block;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     backdrop-filter: blur(5px);
@@ -173,6 +221,10 @@ h1 {
 
 .caixa-textos-projetos {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .info-projetos {
@@ -250,6 +302,8 @@ h1 {
 
 
 .carousel {
+    height: 250px;    /* altura fixa só pro carousel */
+    flex-shrink: 0;
     position: relative;
     /* importante para posicionar as setinhas */
     display: flex;
@@ -594,4 +648,54 @@ textarea,
 button,
 a {
     cursor: pointer !important;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle { top: 15px; right: 15px; }
+    .whatsapp-float { 
+        width: 55px; 
+        height: 55px; 
+        font-size: 30px; 
+        bottom: 20px; 
+        right: 20px; 
+    }
+    
+    /* Espaço pro botão do WhatsApp não cobrir o formulário */
+    .contatos {
+        padding-bottom: 100px;
+    }
+}
+
+/* RESPONSIVIDADE TOTAL */
+@media (max-width: 768px) {
+    body { padding-top: 70px; }
+    
+    .navegacao { padding: 1rem; }
+    .menu { gap: 1.5rem; font-size: 0.9rem; }
+    
+    .cabecalho { padding: 2rem 1rem; text-align: center; }
+    .foto-perfil { width: 180px; height: 180px; }
+    h1 { font-size: 2.5rem; }
+    .cabecalho-sub-titulo { font-size: 1.2rem; }
+    
+    .sobre, .contatos, .stats-section { padding: 4rem 1rem; }
+    .sobre-caixa, .formulario-contato { padding: 1.5rem; }
+    
+    .projetos { padding: 4rem 1rem; }
+    .projetos-titulos { font-size: 2rem; }
+    .projetos-caixa { grid-template-columns: 1fr; gap: 2rem; }
+    .projetos-card { height: auto; min-height: 350px; }
+    .carousel { height: 220px; }
+    
+    .stats-container { grid-template-columns: repeat(2, 1fr); }
+    
+    .theme-toggle { top: 10px; right: 10px; }
+    .whatsapp-float { width: 55px; height: 55px; font-size: 30px; bottom: 20px; right: 20px; }
+    .contatos { padding-bottom: 100px; }
+}
+
+@media (max-width: 480px) {
+    .stats-container { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+    .foto-perfil { width: 160px; height: 160px; }
 }
