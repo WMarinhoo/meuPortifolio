@@ -43,20 +43,15 @@ body {
     top: 0;
     background: rgba(15, 23, 42, 0.8);
     width: 100%;
-    z-index: 100;
-    /* Define que o menu fique na frente de todos os componentes da página */
+    z-index: 100; /* Define que o menu fique na frente de todos os componentes da página */
     padding: 1.5rem;
-
 }
 
 .menu {
     display: flex;
-    justify-content: center;
-    /* Alinha menu no centro da tela */
-    list-style: none;
-    /* Tirar o ícone de bolinha dos textos do menu */
-    gap: 3rem;
-    /* Desgrudar os textos do menu */
+    justify-content: center; /* Alinha menu no centro da tela */
+    list-style: none; /* Tirar o ícone de bolinha dos textos do menu */
+    gap: 3rem; /* Desgrudar os textos do menu */
 }
 
 .menu-link {
@@ -154,6 +149,8 @@ h1 {
     font-size: 1rem;
 }
 
+
+  /* PROJETOS */
 .projetos {
     padding: 6rem 2rem; /* já estava bom, mas vamos melhorar */
     
@@ -166,7 +163,6 @@ h1 {
 
     .projetos-caixa {
         grid-template-columns: 1fr; /* 1 card por linha no celular */
-        
         gap: 2rem;
     }
 
@@ -184,7 +180,7 @@ h1 {
 
 .projetos-caixa {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
